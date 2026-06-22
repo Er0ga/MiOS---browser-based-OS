@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiOS</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <!-- topbar -->
+    <div id="top" class="topbar">
+      <div class="topbar-left">
+        <span class="logo" id="welcomeopen">⌂ MiOS</span>
+        <span class="menu-item" id="aboutopen">About</span>
+        <span class="menu-item" id="projectsopen">Projects</span>
+        <span class="menu-item" id="terminalopen">Terminal</span>
+        <span class="menu-item" id="contactopen">Contact</span>
+        <span class="menu-item" id="notasnew">+ Note</span>
+      </div>
+      <div class="topbar-right">
+        <span class="pill" id="batteryElement">🔋 100%</span>
+        <span class="pill" id="timeElement">...</span>
+      </div>
+    </div>
+
+    <!-- desktop icons -->
+    <div id="desktopApps">
+      <div class="appicon" data-window="welcome">
+        <div class="appicon-img">👋</div>
+        <p class="appicon-label">Welcome</p>
+      <div class="appicon" data-window="terminal">
+        <div class="appicon-img">💻</div>
+        <p class="appicon-label">Terminal</p>
+      </div>
+      <div class="appicon" data-window="contact">
+        <div class="appicon-img">✉️</div>
+        <p class="appicon-label">Contact</p>
+      </div>
+      <div class="appicon" id="notasicon">
+        <div class="appicon-img">📝</div>
+        <p class="appicon-label">Notes</p>
+      </div>
+    </div>
+
+    <!-- welcome window -->
+    <div class="window" id="welcome" style="top: calc(50% - 170px); left: calc(50% - 230px); width: 460px;">
+      <div class="windowheader" id="welcomeheader">
+        <div class="closebutton" id="welcomeclose"></div>
+        <p class="headertext">Welcome</p>
+        <div class="header-spacer"></div>
+      </div>
+      <div class="window-body">
+        <h1 style="margin: 0 0 4px;">Hello! 👋</h1>
+        <p style="margin: 0 0 12px; opacity: 0.7;">Welcome to <strong>MiOS</strong></p>
+        <p>
+          This is not a regular webpage — it's a small operating system.
+          Instead of just reading about me, <strong>explore it</strong>.
+        </p>
+        <p style="opacity: 0.8;">
+          🖱️ <em>Double-click</em> the desktop icons or use the top menu.
+          Windows can be <em>dragged</em> from their title bar and closed with the red button.
+        </p>
+        <p style="opacity: 0.8;">
+          In a hurry? Open the <strong>Terminal</strong> and type <code>help</code>.
+        </p>
+      </div>
+    </div>
+
+    <!-- about window -->
+    <div class="window" id="about" style="top: calc(50% - 240px); left: calc(50% - 280px); display: none;">
+      <div class="windowheader" id="aboutheader">
+        <div class="closebutton" id="aboutclose"></div>
+        <p class="headertext" id="abouttitle">About me</p>
+        <div class="header-spacer"></div>
+      </div>
+      <div class="app-pane app-pane--split">
+        <div id="sidebar" class="sidebar"></div>
+        <div id="contentDisplay" class="content-display"></div>
+      </div>
+    </div>
+
+    <!-- projects window -->
+    <div class="window" id="projects" style="top: calc(50% - 230px); left: calc(50% - 260px); display: none;">
+      <div class="windowheader" id="projectsheader">
+        <div class="closebutton" id="projectsclose"></div>
+        <p class="headertext">Projects</p>
+        <div class="header-spacer"></div>
+      </div>
+      <div class="app-pane">
+        <div id="projectGrid" class="project-grid"></div>
+      </div>
+    </div>
+
+    <!-- terminal window -->
+    <div class="window window--dark" id="terminal" style="top: calc(50% - 200px); left: calc(50% - 320px); display: none;">
+      <div class="windowheader" id="terminalheader">
+        <div class="closebutton" id="terminalclose"></div>
+        <p class="headertext">eroga@webOS: ~</p>
+        <div class="header-spacer"></div>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <div id="terminalOutput"></div>
+        <div class="terminal-input-line">
+          <span class="terminal-prompt">eroga@webOS:~$</span>
+          <input
+            type="text"
+            id="terminalInput"
+            class="terminal-input"
+            autocomplete="off"
+            spellcheck="false"
+            autofocus
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- contact window -->
+    <div class="window" id="contact" style="top: calc(50% - 160px); left: calc(50% - 190px); display: none;">
+      <div class="windowheader" id="contactheader">
+        <div class="closebutton" id="contactclose"></div>
+        <p class="headertext">Contact</p>
+        <div class="header-spacer"></div>
+      </div>
+      <div class="window-body" style="width: 320px;">
+        <p style="margin-top: 0;">Want to say hi? Find me here:</p>
+        <a class="contact-link" href="https://hackclub.com/" target="_blank" rel="noopener">⚡ Hack Club</a>
+        <p style="margin-top: 12px; font-size: 13px; opacity: 0.7; margin-bottom: 0;">
+          No public social media for now — but I'm on Hack Club!
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
