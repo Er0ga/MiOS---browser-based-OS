@@ -13,3 +13,10 @@ A browser-based operating system with draggable windows, a live clock, an intera
 - **Terminal** — interactive console with real commands. Type `help`.
 - **Contact** — links window.
 - **Sticky notes** *(custom feature)* — create draggable, editable notes on the desktop from the topbar, desktop icon, or by typing `note` in the terminal.
+
+## Terminal commands
+
+`help`, `about`, `whoami`, `projects`, `skills`, `contact`, `neofetch`,
+`open <app>`, `date`, `echo <text>`, `note`, `ls`, `clear`
+
+Use ↑ / ↓ to repeat previous commands.
